@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
+import {doclists} from '../tab3/list'
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +8,7 @@ import { Platform } from '@ionic/angular';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  lists = doclists;
 
   constructor(public platform : Platform) {}
 

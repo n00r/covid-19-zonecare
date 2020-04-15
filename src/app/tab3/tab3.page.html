@@ -1,10 +1,4 @@
-<ion-header [translucent]="true" *ngIf="platform.is('mobile')">
-  <ion-toolbar>
-    <ion-title>
-      dashboard
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+
 <ion-content [fullscreen]="true">
 
   <ion-grid>
@@ -34,13 +28,16 @@
   <ion-segment (ionChange)="segmentChanged($event)" value="1" class="plt-iphone plt-ios plt-phablet plt-mobile ios"
     mode="ios">
     <ion-segment-button value="1">
-      <ion-label>Grocery Shops</ion-label>
+      <ion-label>Basic Needs</ion-label>
     </ion-segment-button>
     <ion-segment-button value="2">
-      <ion-label>Medical Stores</ion-label>
+      <ion-label>Gas Agencies</ion-label>
     </ion-segment-button>
     <ion-segment-button value="3">
       <ion-label>General Physicians</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="4">
+      <ion-label>Take Away Points</ion-label>
     </ion-segment-button>
   </ion-segment>
   <div class="p22"></div>

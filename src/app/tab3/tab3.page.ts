@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
-import {grocerylists,medlists,doclists} from './list'
+import {grocerylists,gaslists,doclists,takelists} from './list'
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
@@ -16,10 +16,13 @@ export class Tab3Page {
       this.lists = grocerylists
     }
     if(ev.detail.value == 2){
-      this.lists = medlists
+      this.lists = gaslists
     }
     if(ev.detail.value == 3){
       this.lists = doclists
+    }
+    if(ev.detail.value == 4){
+      this.lists = takelists
     }
   }
 

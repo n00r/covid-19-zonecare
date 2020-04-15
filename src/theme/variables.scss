@@ -121,3 +121,6 @@ $grid-breakpoints: (
 ion-segment{
   height: 40px;
 }
+::-webkit-scrollbar {
+  display: none;
+}

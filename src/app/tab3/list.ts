@@ -14,13 +14,13 @@ export const grocerylists = [{
     phone: '+91 98234-232-2323'
 }];
 
-export const medlists = [{
-    name: 'MedPlus ',
+export const gaslists = [{
+    name: 'Indane Gas Agency',
     contact: 'Ajay Prabhu',
     phone: '+91 9823-3435-94'
 },
 {
-    name: 'Apollo Pharmacy',
+    name: 'Bharat Gas Agency',
     contact: 'Deva Raj',
     phone: '+91 876-232-6764'
 }];
@@ -32,5 +32,20 @@ export const doclists = [{
 {
     name: 'Arul Annai Hospital',
     contact: 'Dr.Hari raman',
+    phone: '+91 2345-232-2323'
+},
+{
+    name: 'AIIMS Hospital',
+    contact: 'Dr.Thendral',
+    phone: '+91 2345-232-2323'
+}];
+export const takelists = [{
+    name: 'HM Burger Point',
+    contact: 'kalyan',
+    phone: '+91 8653-1234-23'
+},
+{
+    name: "Shankar's Curry point",
+    contact: 'Harish',
     phone: '+91 2345-232-2323'
 }];
