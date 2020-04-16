@@ -1,0 +1,16 @@
+[
+  {
+    "pincode_ward": "123456P09",
+    "active": 147,
+    "recovered": 12,
+    "deceased": 5,
+    "quarantine": 147
+  },
+  {
+    "pincode_ward": "741852Y78",
+    "active": 252,
+    "recovered": 16,
+    "deceased": 4,
+    "quarantine": 102
+  }
+]

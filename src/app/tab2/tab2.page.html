@@ -6,26 +6,30 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
+  <h5 class="ion-padding-start" >Search with zipcode or location </h5>
 
   <ion-grid>
     <ion-row>
       <ion-col size-xs="12" size-sm="12" size-md="5" size-lg="5">
-        <ion-searchbar showCancelButton="focus" class="ios" placeholder="Enter the PinCode"></ion-searchbar>
+        <ion-searchbar showCancelButton="focus" class="ios" placeholder="Enter the PinCode" (ionChange)="onInput($event)"> </ion-searchbar>
 
       </ion-col>
-      <ion-col size-xs="12" size-sm="12" size-md="5" size-lg="5">
+      <ion-col size-xs="12" size-sm="12" size-md="5" size-lg="5" *ngIf="isWardAvail">
         <ion-item class="dropdown">
           <ion-label>Select Ward</ion-label>
-          <ion-select value="Ward 1" okText="Ok" cancelText="Cancel">
+          <!-- <ion-select value="Ward 1" okText="Ok" cancelText="Cancel">
             <ion-select-option value="Ward 1">Ward 1</ion-select-option>
             <ion-select-option value="Ward 2">Ward 2</ion-select-option>
             <ion-select-option value="Ward 3">Ward 3</ion-select-option>
             <ion-select-option value="Ward 4">Ward 4</ion-select-option>
+          </ion-select> -->
+          <ion-select (ionChange)="selectWard($event)">
+            <ion-select-option *ngFor="let item of countdata">Ward {{item.ward}}</ion-select-option>
           </ion-select>
         </ion-item>
       </ion-col>
       <ion-col size-xs="12" size-sm="12" size-md="2" size-lg="2">
-        <ion-button expand="block" class="ww-b">Search</ion-button>
+        <ion-button expand="block" class="ww-b" (click)="getwardlist()">Search</ion-button>
 
 
 
@@ -34,10 +38,18 @@
     </ion-row>
   </ion-grid>
 
-  <ion-card>
+  <h5 class="ion-padding" *ngIf="noDatafound">No Record Found</h5>
+
+  <ion-card *ngIf="wardDetails">
     <ion-card-header>
 
-      <ion-card-title class="ion-text-center">Ward 1 </ion-card-title>
+      <ion-card-title class="ion-text-center">{{selectWardVal}}
+       
+      </ion-card-title>
+      <div style="    text-align: center; margin-top: 13px;" *ngIf="wardDetails.active > 10"> 
+        <ion-badge color="danger" slot="end" style="padding: 5px;">RED ALERT ZONE</ion-badge>
+
+      </div>
     </ion-card-header>
 
     <ion-card-content>
@@ -46,25 +58,25 @@
         <ion-row>
           <ion-col>
             <ion-chip color="primary">
-              <ion-label>Total Cases : <b>1,883</b></ion-label>
+              <ion-label>Active Cases : <b>{{wardDetails.active}}</b></ion-label>
             </ion-chip>
           </ion-col>
           <ion-col>
             <ion-chip color="success">
-              <ion-label>Recovered : <b>443</b></ion-label>
+              <ion-label>Recovered : <b>{{wardDetails.recovered}}</b></ion-label>
             </ion-chip>
           </ion-col>
 
         </ion-row>
         <ion-row class="ion-text-center">
           <ion-col>
-            <ion-chip color="primary">
-              <ion-label>Active Cases : <b>11</b></ion-label>
+            <ion-chip color="secondary">
+              <ion-label>Quarantine Cases : <b>{{wardDetails.quarantine}}</b></ion-label>
             </ion-chip>
           </ion-col>
           <ion-col>
             <ion-chip color="danger">
-              <ion-label>Deaths : <b>11</b></ion-label>
+              <ion-label>Deaths : <b>{{wardDetails.deceased}}</b></ion-label>
             </ion-chip>
           </ion-col>
 
@@ -92,13 +104,12 @@
       </ion-item>
     </ion-card-content>
   </ion-card>
-  <h4 class="ion-padding">
+  <!-- <h4 class="ion-padding">
     General Physicians
   </h4>
   <ion-card *ngFor="let list of lists">
     <ion-list>
       
-    <!-- <ion-list-header class="plt-iphone plt-ios plt-phablet plt-mobile ios" mode="ios" style="color: #eb445a;" >asdfdsf</ion-list-header> -->
   
       <ion-item-divider>
         <ion-label class="f19" color="dark" >
@@ -120,7 +131,7 @@
         <ion-icon name="call-outline" slot="start"></ion-icon>
       </ion-item>
     </ion-list>
-    </ion-card>
+    </ion-card> -->
     <div class="ion-padding"></div>
     <div class="ion-padding"></div>
     <div class="ion-padding"></div>

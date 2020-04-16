@@ -3,7 +3,7 @@
   <h4 class="ion-padding">
     Coronavirus disease (COVID -19) outbreak situation
   </h4>
-  <ion-card>
+  <ion-card *ngFor="let item of worldcountdata">
     <ion-card-header>
 
       <ion-card-title class="ion-text-center">All Over the World</ion-card-title>
@@ -15,31 +15,45 @@
         <ion-row>
           <ion-col>
             <ion-chip color="primary">
-              <ion-label>Confirmed Cases : <b>1,883,119</b></ion-label>
+              <ion-label>Confirmed Cases : <b>{{item.cases | number}}</b></ion-label>
+            </ion-chip>
+          </ion-col>
+          
+          <ion-col>
+            <ion-chip color="medium">
+              <ion-label>Today Cases : <b>{{item.todayCases | number}}</b></ion-label>
+            </ion-chip>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row class="ion-text-center">
+          <ion-col>
+            <ion-chip color="danger">
+              <ion-label>Confirmed Deaths : <b>{{item.deaths | number}}</b></ion-label>
+            </ion-chip>
+          </ion-col>
+
+
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-chip color="secondary">
+              <ion-label>Active Cases : <b>{{item.active | number}}</b></ion-label>
             </ion-chip>
           </ion-col>
           <ion-col>
             <ion-chip color="success">
-              <ion-label>Recovered : <b>443,816</b></ion-label>
+              <ion-label>Recovered : <b>{{item.recovered | number}}</b></ion-label>
             </ion-chip>
           </ion-col>
-
-        </ion-row>
-        <ion-row class="ion-text-center">
-          <ion-col>
-            <ion-chip color="danger">
-              <ion-label>Confirmed Deaths : <b>117,569</b></ion-label>
-            </ion-chip>
-          </ion-col>
-
 
         </ion-row>
       </ion-grid>
-      <p>Last Update: 15 Apr 2020, 11:30 GMT+5:30 </p>
+      <p>Last Updated: {{item.updated | date : 'long'}} </p>
 
     </ion-card-content>
   </ion-card>
-  <ion-card>
+  <ion-card *ngFor="let item of Indiacountdata">
     <ion-card-header>
 
       <ion-card-title class="ion-text-center"> Country : India</ion-card-title>
@@ -51,63 +65,43 @@
         <ion-row>
           <ion-col>
             <ion-chip color="primary">
-              <ion-label>Confirmed Cases : <b> 9,635</b></ion-label>
+              <ion-label>Confirmed Cases : <b>{{item.totalconfirmed | number}}</b></ion-label>
             </ion-chip>
           </ion-col>
+          
           <ion-col>
-            <ion-chip color="success">
-              <ion-label>Recovered : <b>1,178</b></ion-label>
+            <ion-chip color="medium">
+              <ion-label>Today Cases : <b>{{item.dailyconfirmed | number}}</b></ion-label>
             </ion-chip>
           </ion-col>
-
         </ion-row>
+        
         <ion-row class="ion-text-center">
           <ion-col>
             <ion-chip color="danger">
-              <ion-label>Confirmed Deaths : <b>331</b></ion-label>
+              <ion-label>Confirmed Deaths : <b>{{item.totaldeceased | number}}</b></ion-label>
             </ion-chip>
           </ion-col>
 
 
         </ion-row>
-      </ion-grid>
-      <p>Last Update: 15 Apr 2020, 11:30 GMT+5:30 </p>
-
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-header>
-
-      <ion-card-title class="ion-text-center"> Country : US</ion-card-title>
-    </ion-card-header>
-
-    <ion-card-content>
-
-      <ion-grid class="ion-text-center">
         <ion-row>
           <ion-col>
-            <ion-chip color="primary">
-              <ion-label>Confirmed Cases : <b> 582,634              </b></ion-label>
+            <ion-chip color="secondary">
+              <ion-label>Today Recovered : <b>{{item.dailyrecovered | number}}</b></ion-label>
             </ion-chip>
           </ion-col>
           <ion-col>
             <ion-chip color="success">
-              <ion-label>Recovered : <b>44,308              </b></ion-label>
+              <ion-label>Recovered : <b>{{item.totalrecovered | number}}</b></ion-label>
             </ion-chip>
           </ion-col>
-
-        </ion-row>
-        <ion-row class="ion-text-center">
-          <ion-col>
-            <ion-chip color="danger">
-              <ion-label>Confirmed Deaths : <b>23,649              </b></ion-label>
-            </ion-chip>
-          </ion-col>
-
 
         </ion-row>
       </ion-grid>
-      <p>Last Update: 15 Apr 2020, 11:30 GMT+5:30 </p>
+      <p>Last Updated: {{item.date | date : 'long'}} </p>
+
     </ion-card-content>
   </ion-card>
+  
 </ion-content>

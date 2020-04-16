@@ -1,0 +1,18 @@
+[
+  {
+    "pincode_ward": "731982D05",
+    "category": "Grocery",
+    "shopname": "Loyal",
+    "contactperson": "Sachin",
+    "contactno": "1237894561",
+    "isdelivery": "no"
+  },
+  {
+    "pincode_ward": "134679OE",
+    "category": "Medical",
+    "shopname": "Royal",
+    "contactperson": "Sandeep",
+    "contactno": "9638527415",
+    "isdelivery": "yes"
+  }
+]
