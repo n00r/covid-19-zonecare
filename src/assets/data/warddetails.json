@@ -1,16 +1,142 @@
 [
   {
-    "pincode_ward": "123456P09",
-    "active": 147,
-    "recovered": 12,
-    "deceased": 5,
-    "quarantine": 147
+  "pincode_ward": "560004Ward01",
+  "active": 9,
+  "recovered": 10,
+  "deceased": 2,
+  "quarantine": 52
   },
   {
-    "pincode_ward": "741852Y78",
-    "active": 252,
-    "recovered": 16,
-    "deceased": 4,
-    "quarantine": 102
+  "pincode_ward": "560004Ward02",
+  "active": 60,
+  "recovered": 18,
+  "deceased": 3,
+  "quarantine": 90
+  },
+  {
+  "pincode_ward": "560004Ward03",
+  "active": 120,
+  "recovered": 20,
+  "deceased": 0,
+  "quarantine": 150
+  },
+  {
+  "pincode_ward": "560004Ward04",
+  "active": 124,
+  "recovered": 12,
+  "deceased": 5,
+  "quarantine": 147
+  },
+  {
+  "pincode_ward": "560004Ward05",
+  "active": 73,
+  "recovered": 16,
+  "deceased": 4,
+  "quarantine": 102
+  },
+  {
+  "pincode_ward": "560083Ward11",
+  "active": 36,
+  "recovered": 8,
+  "deceased": 5,
+  "quarantine": 43
+  },
+  {
+  "pincode_ward": "560083Ward12",
+  "active": 32,
+  "recovered": 25,
+  "deceased": 3,
+  "quarantine": 60
+  },
+  {
+  "pincode_ward": "560083Ward13",
+  "active": 56,
+  "recovered": 20,
+  "deceased": 1,
+  "quarantine": 85
+  },
+  {
+  "pincode_ward": "560083Ward14",
+  "active": 118,
+  "recovered": 15,
+  "deceased": 3,
+  "quarantine": 156
+  },
+  {
+  "pincode_ward": "560083Ward15",
+  "active": 55,
+  "recovered": 19,
+  "deceased": 0,
+  "quarantine": 102
+  },
+  {
+  "pincode_ward": "560002Ward21",
+  "active": 43,
+  "recovered": 10,
+  "deceased": 2,
+  "quarantine": 52
+  },
+  {
+  "pincode_ward": "560002Ward22",
+  "active": 66,
+  "recovered": 18,
+  "deceased": 7,
+  "quarantine": 90
+  },
+  {
+  "pincode_ward": "560002Ward23",
+  "active": 130,
+  "recovered": 20,
+  "deceased": 0,
+  "quarantine": 150
+  },
+  {
+  "pincode_ward": "560002Ward24",
+  "active": 81,
+  "recovered": 12,
+  "deceased": 6,
+  "quarantine": 123
+  },
+  {
+  "pincode_ward": "560002Ward25",
+  "active": 25,
+  "recovered": 16,
+  "deceased": 3,
+  "quarantine": 98
+  },
+  {
+  "pincode_ward": "560080Ward31",
+  "active": 56,
+  "recovered": 10,
+  "deceased": 2,
+  "quarantine": 69
+  },
+  {
+  "pincode_ward": "560080Ward32",
+  "active": 70,
+  "recovered": 18,
+  "deceased": 4,
+  "quarantine": 90
+  },
+  {
+  "pincode_ward": "560080Ward33",
+  "active": 107,
+  "recovered": 20,
+  "deceased": 0,
+  "quarantine": 150
+  },
+  {
+  "pincode_ward": "560080Ward34",
+  "active": 109,
+  "recovered": 12,
+  "deceased": 5,
+  "quarantine": 159
+  },
+  {
+  "pincode_ward": "560080Ward35",
+  "active": 69,
+  "recovered": 9,
+  "deceased": 4,
+  "quarantine": 102
   }
-]
+  ]

@@ -11,8 +11,8 @@
   <ion-grid>
     <ion-row>
       <ion-col size-xs="12" size-sm="12" size-md="5" size-lg="5">
-        <ion-searchbar showCancelButton="focus" class="ios" placeholder="Enter the PinCode" (ionChange)="onInput($event)"> </ion-searchbar>
-
+        <ion-searchbar showCancelButton="focus" class="ios" placeholder="Enter the PinCode" [ngModel]="pincode"  (ionChange)="onInput($event)"  (ionInput)="onValid($event)" type="number"> </ion-searchbar>
+        <p style="color: red;" *ngIf="!isvalid">Invalid Pincode</p>
       </ion-col>
       <ion-col size-xs="12" size-sm="12" size-md="5" size-lg="5" *ngIf="isWardAvail">
         <ion-item class="dropdown">
@@ -24,7 +24,7 @@
             <ion-select-option value="Ward 4">Ward 4</ion-select-option>
           </ion-select> -->
           <ion-select (ionChange)="selectWard($event)">
-            <ion-select-option *ngFor="let item of countdata">Ward {{item.ward}}</ion-select-option>
+            <ion-select-option *ngFor="let item of countdata">{{item.ward}}</ion-select-option>
           </ion-select>
         </ion-item>
       </ion-col>

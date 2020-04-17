@@ -5,7 +5,9 @@
   <ion-grid>
     <ion-row>
       <ion-col size-xs="12" size-sm="12" size-md="5" size-lg="5">
-        <ion-searchbar showCancelButton="focus" class="ios" placeholder="Enter the PinCode" (ionChange)="onInput($event)"> </ion-searchbar>
+        <ion-searchbar showCancelButton="focus" class="ios" [ngModel]="pincode" placeholder="Enter the PinCode" (ionChange)="onInput($event)" type="number"> </ion-searchbar>
+        <p style="color: red;" *ngIf="!isvalid">Invalid Pincode</p>
+
 
       </ion-col>
       <ion-col size-xs="12" size-sm="12" size-md="5" size-lg="5" *ngIf="isWardAvail">
@@ -18,7 +20,7 @@
             <ion-select-option value="Ward 4">Ward 4</ion-select-option>
           </ion-select> -->
           <ion-select (ionChange)="selectWard($event)">
-            <ion-select-option *ngFor="let item of countdata">Ward {{item.ward}}</ion-select-option>
+            <ion-select-option *ngFor="let item of countdata">{{item.ward}}</ion-select-option>
           </ion-select>
         </ion-item>
       </ion-col>
@@ -35,19 +37,22 @@
   <div *ngIf="response">
   <ion-grid >
   <!-- <div class="p22"></div> -->
-  <ion-segment (ionChange)="segmentChanged($event)" value="1" class="plt-iphone plt-ios plt-phablet plt-mobile ios"
+  <ion-segment (ionChange)="segmentChanged($event)" value="3" class="plt-iphone plt-ios plt-phablet plt-mobile ios"
     mode="ios">
-    <ion-segment-button value="1">
-      <ion-label>Basic Needs</ion-label>
+    <ion-segment-button value="3">
+      <ion-label>General Physicians</ion-label>
+    </ion-segment-button>
+   
+   
+    
+    <ion-segment-button value="4">
+      <ion-label>Take Away Points</ion-label>
     </ion-segment-button>
     <ion-segment-button value="2">
       <ion-label>Gas Agencies</ion-label>
     </ion-segment-button>
-    <ion-segment-button value="3">
-      <ion-label>General Physicians</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="4">
-      <ion-label>Take Away Points</ion-label>
+    <ion-segment-button value="1">
+      <ion-label>Basic Needs</ion-label>
     </ion-segment-button>
   </ion-segment>
   <h5 class="ion-padding" *ngIf="noDatafound">No Record Found</h5>
@@ -90,6 +95,7 @@
   </ion-list>
   </ion-card>
 </div>
-
+<div class="ion-padding"></div>
+<div class="ion-padding"></div>
 
 </ion-content>

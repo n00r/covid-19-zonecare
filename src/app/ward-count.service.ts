@@ -10,9 +10,10 @@ import { retry, catchError } from 'rxjs/operators';
 export class ApiService {
  
   // API path
-  world_count = 'https://corona.lmao.ninja/all';
+  world_count = 'https://corona.lmao.ninja/v2/all';
   india_count = 'https://api.covid19india.org/data.json';
-  ward_list = '../assets/data/wardlist.json';
+  ward_list = '../assets/data/wardlist.json';     // comments this line 
+  // ward_list = ' http://localhost:8080/api/wards'; // un-comments this line for prod
   ward_details = '../assets/data/warddetails.json';
   moreservice_list = '../assets/data/moreservices.json';
  
@@ -62,7 +63,8 @@ export class ApiService {
   };
   getWardList(val): Observable<any> {
     return this.http
-      .get<any>(this.ward_list+'?pincode_ward='+val)
+      .get<any>(this.ward_list+'?pincode_ward='+val)   // comments this line 
+      // .get<any>(this.ward_list+'/'+val) // un-comments this line for prod
       .pipe(
         retry(2),
         catchError(this.handleError)

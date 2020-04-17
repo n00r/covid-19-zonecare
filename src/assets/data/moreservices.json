@@ -1,18 +1,162 @@
 [
   {
-    "pincode_ward": "731982D05",
-    "category": "Grocery",
-    "shopname": "Loyal",
-    "contactperson": "Sachin",
-    "contactno": "1237894561",
-    "isdelivery": "no"
+  "pincode_ward": "560004Ward01",
+  "category": "basic_need",
+  "shopname": "BigBazar",
+  "contactperson": "Suresh",
+  "contactno": "8756912623",
+  "isdelivery": "No"
   },
   {
-    "pincode_ward": "134679OE",
-    "category": "Medical",
-    "shopname": "Royal",
-    "contactperson": "Sandeep",
-    "contactno": "9638527415",
-    "isdelivery": "yes"
+  "pincode_ward": "560004Ward02",
+  "category": "basic_need",
+  "shopname": "DeviMedicals",
+  "contactperson": "Ramesh",
+  "contactno": "8745962369",
+  "isdelivery": "No"
+  },
+  {
+  "pincode_ward": "560004Ward03",
+  "category": "gas_agency",
+  "shopname": "Indian Gas-Agency",
+  "contactperson": "Chandrashekhar",
+  "contactno": "6874593250",
+  "isdelivery": "Yes"
+  },
+  {
+  "pincode_ward": "560004Ward04",
+  "category": "take_away",
+  "shopname": "HotelUdupi",
+  "contactperson": "Dileep",
+  "contactno": "8459671236",
+  "isdelivery": "Yes"
+  },
+  {
+  "pincode_ward": "560004Ward05",
+  "category": "general_physician",
+  "shopname": "Docters Clinic",
+  "contactperson": "Dr.Anil",
+  "contactno": "6974530123",
+  "isdelivery": "No"
+  },
+  {
+  "pincode_ward": "560083Ward11",
+  "category": "take_away",
+  "shopname": "HotelChutney",
+  "contactperson": "Manoj",
+  "contactno": "9447596123",
+  "isdelivery": "Yes"
+  },
+  {
+  "pincode_ward": "560083Ward12",
+  "category": "basic_need",
+  "shopname": "ApolloMedicals",
+  "contactperson": "Sandeep",
+  "contactno": "9887459658",
+  "isdelivery": "No"
+  },
+  {
+  "pincode_ward": "560083Ward13",
+  "category": "basic_need",
+  "shopname": "More",
+  "contactperson": "Bhaskar",
+  "contactno": "9410325689",
+  "isdelivery": "No"
+  },
+  {
+  "pincode_ward": "560083Ward14",
+  "category": "gas_agency",
+  "shopname": "Bharath Gas-Agency",
+  "contactperson": "Kiran",
+  "contactno": "9880674859",
+  "isdelivery": "Yes"
+  },
+  {
+  "pincode_ward": "560083Ward15",
+  "category": "general_physician",
+  "shopname": "LifeCare-Clinic",
+  "contactperson": "Dr Kumar",
+  "contactno": "9663025896",
+  "isdelivery": "No"
+  },
+  {
+  "pincode_ward": "560002Ward21",
+  "category": "take_away",
+  "shopname": "Dominos",
+  "contactperson": "Amar",
+  "contactno": "8860125875",
+  "isdelivery": "Yes"
+  },
+  {
+  "pincode_ward": "560002Ward22",
+  "category": "basic_need",
+  "shopname": "SupremeMedicals",
+  "contactperson": "Lohit",
+  "contactno": "9874591237",
+  "isdelivery": "No"
+  },
+  {
+  "pincode_ward": "560002Ward23",
+  "category": "basic_need",
+  "shopname": "M-Stores",
+  "contactperson": "Ramanna",
+  "contactno": "9626547777",
+  "isdelivery": "Yes"
+  },
+  {
+  "pincode_ward": "560002Ward24",
+  "category": "gas_agency",
+  "shopname": "Ravi Gas-Agency",
+  "contactperson": "Anush",
+  "contactno": "9638527415",
+  "isdelivery": "Yes"
+  },
+  {
+  "pincode_ward": "560002Ward25",
+  "category": "general_physician",
+  "shopname": "Krishna Clinic",
+  "contactperson": "Dr.Smitha",
+  "contactno": "9874444446",
+  "isdelivery": "No"
+  },
+  {
+  "pincode_ward": "560080Ward31",
+  "category": "basic_need",
+  "shopname": "R-Stores",
+  "contactperson": "Sharath",
+  "contactno": "9636942034",
+  "isdelivery": "Yes"
+  },
+  {
+  "pincode_ward": "560080Ward32",
+  "category": "general_physician",
+  "shopname": "ShettyClinic",
+  "contactperson": "Dr.KShetty",
+  "contactno": "9648579670",
+  "isdelivery": "No"
+  },
+  {
+  "pincode_ward": "560080Ward33",
+  "category": "basic_need",
+  "shopname": "LaxmiMedicals",
+  "contactperson": "Shantha",
+  "contactno": "9872683330",
+  "isdelivery": "No"
+  },
+  {
+  "pincode_ward": "560080Ward34",
+  "category": "gas_agency",
+  "shopname": "Gopi Gas-Agency",
+  "contactperson": "Bharath",
+  "contactno": "8794563210",
+  "isdelivery": "Yes"
+  },
+  {
+  "pincode_ward": "560080Ward35",
+  "category": "take_away",
+  "shopname": "HotelTaj",
+  "contactperson": "Sachin",
+  "contactno": "9816005887",
+  "isdelivery": "Yes"
   }
-]
+  ]

@@ -1,14 +1,105 @@
 [
-    {
-      "pincode_ward": "7531591KQ",
-      "pincode": "753159",
-      "ward": "1KQ",
-      "id": 1
-    },
-    {
-      "pincode_ward": "9517539IW",
-      "pincode": "951753",
-      "ward": "9IW",
-      "id": 2
-    }
+  {
+  "pincode_ward": "560004Ward01",
+  "pincode": "560004",
+  "ward": "Ward01",
+  "id": 1
+  },
+  {
+  "pincode_ward": "560004Ward02",
+  "pincode": "560005",
+  "ward": "Ward02",
+  "id": 2
+  },
+  {
+  "pincode_ward": "560004Ward03",
+  "pincode": "560006",
+  "ward": "Ward03",
+  "id": 3
+  },
+  {
+  "pincode_ward": "560004Ward04",
+  "pincode": "560007",
+  "ward": "Ward04",
+  "id": 4
+  },
+  {
+  "pincode_ward": "560004Ward05",
+  "pincode": "560008",
+  "ward": "Ward05",
+  "id": 5
+  },
+  {
+  "pincode_ward": "560083Ward11",
+  "pincode": "560083",
+  "ward": "Ward01",
+  "id": 6
+  },
+  {
+  "pincode_ward": "560083Ward12",
+  "pincode": "560084",
+  "ward": "Ward02",
+  "id": 7
+  },
+  {
+  "pincode_ward": "560083Ward13",
+  "pincode": "560085",
+  "ward": "Ward03",
+  "id": 8
+  },
+  {
+  "pincode_ward": "560083Ward14",
+  "pincode": "560086",
+  "ward": "Ward04",
+  "id": 9
+  },
+  {
+  "pincode_ward": "560002Ward21",
+  "pincode": "560022",
+  "ward": "Ward01",
+  "id": 11
+  },
+  {
+  "pincode_ward": "560002Ward22",
+  "pincode": "560023",
+  "ward": "Ward02",
+  "id": 12
+  },
+  {
+  "pincode_ward": "560002Ward23",
+  "pincode": "560024",
+  "ward": "Ward03",
+  "id": 13
+  },
+  {
+  "pincode_ward": "560002Ward24",
+  "pincode": "560025",
+  "ward": "Ward04",
+  "id": 14
+  },
+  {
+  "pincode_ward": "560002Ward25",
+  "pincode": "560026",
+  "ward": "Ward05",
+  "id": 15
+  },
+  {
+  "pincode_ward": "560080Ward31",
+  "pincode": "560080",
+  "ward": "Ward01",
+  "id": 16
+  },
+  {
+  "pincode_ward": "560080Ward32",
+  "pincode": "560081",
+  "ward": "Ward02",
+  "id": 17
+  },
+  {
+  "pincode_ward": "560080Ward33",
+  "pincode": "560082",
+  "ward": "Ward03",
+  "id": 18
+  }
   ]
+  

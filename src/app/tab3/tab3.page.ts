@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import {grocerylists,gaslists,doclists,takelists} from './list';
 import { ApiService } from '../ward-count.service';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-tab3',
@@ -18,34 +19,36 @@ export class Tab3Page {
   noDatafound: boolean;
   wardDetails: any;
   response: any;
+  pincode: any;
+  isvalid: boolean = true ;
 
-  constructor(public platform : Platform,public apiService: ApiService) {
+  constructor(public platform : Platform,public apiService: ApiService,private storage: Storage) {
     
   }
   segmentChanged(ev: any) {
     this.noDatafound= false;
     if(ev.detail.value == 1){
-      this.lists = this.response.filter(data => data.category === 'Grocery');
+      this.lists = this.response.filter(data => data.category === 'basic_need');
       if(this.lists.length == 0){
         this.noDatafound= true;
       }
     }
     if(ev.detail.value == 2){
-      this.lists = this.response.filter(data => data.category === 'GasAgency');
+      this.lists = this.response.filter(data => data.category === 'gas_agency');
       if(this.lists.length == 0){
         this.noDatafound= true;
       }
 
     }
     if(ev.detail.value == 3){
-      this.lists = this.response.filter(data => data.category === 'Medical');
+      this.lists = this.response.filter(data => data.category === 'general_physician');
       if(this.lists.length == 0){
         this.noDatafound= true;
       }
 
     }
     if(ev.detail.value == 4){
-      this.lists = this.response.filter(data => data.category === 'TakeAway');
+      this.lists = this.response.filter(data => data.category === 'take_away');
       if(this.lists.length == 0){
         this.noDatafound= true;
       }
@@ -53,6 +56,9 @@ export class Tab3Page {
     }
   }
   ionViewWillEnter() {
+    this.storage.get('pincode').then((val) => {
+      this.pincode = val
+    });
   }
   worldcount(val) {
     if (this.servicelists.size === 0) {
@@ -66,7 +72,15 @@ export class Tab3Page {
 
   }
   getwardlist(){
+    if (this.myInputvalue.length <6){
+      this.isvalid =false;
+      return;
+      
+    }
+    this.isvalid =true;
     this.getlists(this.myInputvalue);
+    this.storage.set('pincode', this.myInputvalue);
+
   }
   getlists(val) {
     this.apiService.getWardList(val).subscribe(response => {
@@ -87,7 +101,7 @@ export class Tab3Page {
         if(response.length !== 0 ){
           this.noDatafound= false;
           this.response = response;
-          this.lists = response.filter(data => data.category === 'Grocery');
+          this.lists = response.filter(data => data.category === 'basic_need');
         }
         else{
           this.noDatafound= true;
