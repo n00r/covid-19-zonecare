@@ -6,6 +6,16 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
+  <div class="ion-padding-top"></div>
+  <div class="ion-padding-top"></div>
+  <ion-title  class="f14">
+        
+    <span class="curspan">Current location</span>
+    Thanisandra, Bengaluru 
+
+    
+    <ion-icon name="chevron-down-outline" ></ion-icon>
+  </ion-title>
   <h5 class="ion-padding-start" >Search with zipcode or location </h5>
 
   <ion-grid>
@@ -16,7 +26,8 @@
       </ion-col>
       <ion-col size-xs="12" size-sm="12" size-md="5" size-lg="5" *ngIf="isWardAvail">
         <ion-item class="dropdown">
-          <ion-label>Select Ward</ion-label>
+          <ion-label *ngIf="!wardselected">Select Ward</ion-label>
+          <ion-label *ngIf="wardselected">Selected Ward</ion-label>
           <!-- <ion-select value="Ward 1" okText="Ok" cancelText="Cancel">
             <ion-select-option value="Ward 1">Ward 1</ion-select-option>
             <ion-select-option value="Ward 2">Ward 2</ion-select-option>

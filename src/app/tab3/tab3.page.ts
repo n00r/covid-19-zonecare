@@ -21,6 +21,7 @@ export class Tab3Page {
   response: any;
   pincode: any;
   isvalid: boolean = true ;
+  wardselected : boolean = false;
 
   constructor(public platform : Platform,public apiService: ApiService,private storage: Storage) {
     
@@ -71,6 +72,11 @@ export class Tab3Page {
     this.myInputvalue = ev.detail.value
 
   }
+  onValid(e) {
+    if (e.type == "ionInput") {
+    this.selectWardVal= e.target.value
+    }
+  }
   getwardlist(){
     if (this.myInputvalue.length <6){
       this.isvalid =false;
@@ -92,7 +98,8 @@ export class Tab3Page {
   }
   selectWard(e){
     this.selectWardVal=e.detail.value;
-    this.getdetails(this.selectWardVal)
+    this.getdetails(this.myInputvalue.substring(0, 6) + this.selectWardVal);
+    this.wardselected = true;
 
     
   }
@@ -101,7 +108,7 @@ export class Tab3Page {
         if(response.length !== 0 ){
           this.noDatafound= false;
           this.response = response;
-          this.lists = response.filter(data => data.category === 'basic_need');
+          this.lists = response.filter(data => data.category === 'general_physician');
         }
         else{
           this.noDatafound= true;

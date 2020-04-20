@@ -17,6 +17,8 @@ export class Tab2Page {
   noDatafound: boolean = false;
   pincode: any;
   isvalid: boolean = true;
+  wardselected : boolean = false;
+
   constructor(public platform : Platform,public apiService: ApiService,private storage: Storage) {}
   ngOnInit() {
   }
@@ -52,16 +54,17 @@ export class Tab2Page {
     })
   }
   selectWard(e){
-    this.selectWardVal=e.detail.value;
+    this.selectWardVal=e.detail.value
     
-    this.getdetails(this.selectWardVal);
+    this.getdetails(this.myInputvalue.substring(0, 6) + this.selectWardVal);
+    this.wardselected = true;
     
 
     
   }
   onValid(e) {
-    if (e.inputType == "insertFromPaste") {
-    this.selectWardVal= e.target.value.substring(0, 2);
+    if (e.type == "ionInput") {
+    this.selectWardVal= e.target.value.substring(0, 6);
     }
   }
 
@@ -70,7 +73,7 @@ export class Tab2Page {
         if(response.length !== 0 ){
           this.noDatafound= false;
           // this.wardDetails = response[0];
-          this.wardDetails = response.filter(res =>(res.pincode_ward.substr(6,7) == val))[0]
+          this.wardDetails = response.filter(res =>(res.pincode_ward.substr(6,7) == val.substr(6)))[0]
         }
         else{
           this.noDatafound= true;
