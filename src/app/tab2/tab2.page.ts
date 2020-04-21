@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Platform } from '@ionic/angular';
+import { Platform,LoadingController } from '@ionic/angular';
 import { ApiService } from '../ward-count.service';
 import { Storage } from '@ionic/storage';
 
@@ -19,7 +19,7 @@ export class Tab2Page {
   isvalid: boolean = true;
   wardselected : boolean = false;
 
-  constructor(public platform : Platform,public apiService: ApiService,private storage: Storage) {}
+  constructor(public platform : Platform,public apiService: ApiService,private storage: Storage,public loadingController: LoadingController) {}
   ngOnInit() {
   }
 
@@ -79,6 +79,17 @@ export class Tab2Page {
           this.noDatafound= true;
         }
       })
+  }
+
+  async gettingLocation() {
+    const loading = await this.loadingController.create({
+      message: 'Getting current location...',
+      duration: 2000
+    });
+    await loading.present();
+
+    const { role, data } = await loading.onDidDismiss();
+    console.log('Loading dismissed!');
   }
 
 }

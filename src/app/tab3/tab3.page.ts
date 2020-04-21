@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Platform } from '@ionic/angular';
+import { Platform,LoadingController } from '@ionic/angular';
 import {grocerylists,gaslists,doclists,takelists} from './list';
 import { ApiService } from '../ward-count.service';
 import { Storage } from '@ionic/storage';
@@ -23,7 +23,7 @@ export class Tab3Page {
   isvalid: boolean = true ;
   wardselected : boolean = false;
 
-  constructor(public platform : Platform,public apiService: ApiService,private storage: Storage) {
+  constructor(public platform : Platform,public apiService: ApiService,private storage: Storage,public loadingController: LoadingController) {
     
   }
   segmentChanged(ev: any) {
@@ -115,5 +115,14 @@ export class Tab3Page {
         }
       })
   }
+  async gettingLocation() {
+    const loading = await this.loadingController.create({
+      message: 'Getting current location...',
+      duration: 2000
+    });
+    await loading.present();
 
+    const { role, data } = await loading.onDidDismiss();
+    console.log('Loading dismissed!');
+  }
 }
