@@ -20,7 +20,7 @@ export class Tab1Page {
   worldcount() {
     if (this.worldcountdata.size === 0) {
       this.apiService.worldcount().subscribe(response => {
-        this.worldcountdata.add(response.data);
+        this.worldcountdata.add(response);
       })
     }
   }

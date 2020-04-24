@@ -17,6 +17,7 @@ export class Tab3Page {
   countdata: any;
   selectWardVal: any;
   noDatafound: boolean;
+  noWardfound: boolean = false;
   wardDetails: any;
   response: any;
   pincode: any;
@@ -70,15 +71,17 @@ export class Tab3Page {
   }
   onInput(ev){
     this.myInputvalue = ev.detail.value
-
+    this.isWardAvail = false;
+    this.wardDetails = false;
+    this.wardselected = false;
   }
   onValid(e) {
     if (e.type == "ionInput") {
-    this.selectWardVal= e.target.value
+    this.pincode= e.target.value
     }
   }
   getwardlist(){
-    if (this.myInputvalue.length <6){
+    if (this.myInputvalue.length <6 || this.myInputvalue.length>6){
       this.isvalid =false;
       return;
       
@@ -92,8 +95,12 @@ export class Tab3Page {
     this.apiService.getWardList(val).subscribe(response => {
       if(response.length !== 0 ){
         this.isWardAvail=true;
+        this.noWardfound= false;
+        this.countdata = response;
       }
-      this.countdata = response;
+      else{
+        this.noWardfound= true;
+      }
     })
   }
   selectWard(e){
@@ -105,10 +112,12 @@ export class Tab3Page {
   }
   getdetails(val){
       this.apiService.moreServiceLists(val).subscribe(response => {
+        this.lists = [];
         if(response.length !== 0 ){
           this.noDatafound= false;
           this.response = response;
           this.lists = response.filter(data => data.category === 'general_physician');
+          this.segmentChanged({detail:{value:3}});
         }
         else{
           this.noDatafound= true;

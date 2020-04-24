@@ -15,13 +15,13 @@
         <ion-row>
           <ion-col>
             <ion-chip color="primary">
-              <ion-label>Confirmed Cases : <b>{{item.total_cases }}</b></ion-label>
+              <ion-label>Confirmed Cases : <b>{{item.cases | number}}</b></ion-label>
             </ion-chip>
           </ion-col>
           
           <ion-col>
             <ion-chip color="medium">
-              <ion-label>Recovered Percentage : <b>{{item.closed_cases_recovered_percentage | number:'.00'}} %</b></ion-label>
+              <ion-label>Today Cases : <b>{{item.todayCases | number}}</b></ion-label>
             </ion-chip>
           </ion-col>
         </ion-row>
@@ -29,7 +29,7 @@
         <ion-row class="ion-text-center">
           <ion-col>
             <ion-chip color="danger">
-              <ion-label>Confirmed Deaths : <b>{{item.death_cases }}</b></ion-label>
+              <ion-label>Confirmed Deaths : <b>{{item.deaths | number}}</b></ion-label>
             </ion-chip>
           </ion-col>
 
@@ -38,18 +38,18 @@
         <ion-row>
           <ion-col>
             <ion-chip color="secondary">
-              <ion-label>Active Cases : <b>{{item.mild_condition_active_cases }}</b></ion-label>
+              <ion-label>Active Cases : <b>{{item.active | number}}</b></ion-label>
             </ion-chip>
           </ion-col>
           <ion-col>
             <ion-chip color="success">
-              <ion-label>Recovered : <b>{{item.recovered_closed_cases }}</b></ion-label>
+              <ion-label>Recovered : <b>{{item.recovered | number}}</b></ion-label>
             </ion-chip>
           </ion-col>
 
         </ion-row>
       </ion-grid>
-      <p>Last Updated: {{item.last_update}} </p>
+      <p>Last Updated: {{item.updated | date : 'long'}} </p>
       <!-- <p>Source: https://corona.lmao.ninja </p> -->
 
     </ion-card-content>

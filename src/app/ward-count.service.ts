@@ -10,7 +10,7 @@ import { retry, catchError } from 'rxjs/operators';
 export class ApiService {
  
   // API path
-  world_count = 'https://corona-virus-stats.herokuapp.com/api/v1/cases/general-stats';
+  world_count = 'https://corona.lmao.ninja/v2/all';
   india_count = 'https://api.covid19india.org/data.json';
   ward_list = '../assets/data/wardlist.json';     // comments this line 
   // ward_list = ' http://localhost:8080/api/wards'; // un-comments this line for prod

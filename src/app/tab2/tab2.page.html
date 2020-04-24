@@ -21,7 +21,7 @@
           <ion-icon slot="icon-only" name="locate-outline"></ion-icon>
         </ion-button>
        </ion-searchbar>
-        <p style="color: red;" *ngIf="!isvalid">Invalid Pincode</p>
+        <p style="color: red;" *ngIf="!isvalid">Not a valid pincode</p>
       </ion-col>
       <ion-col size-xs="12" size-sm="12" size-md="5" size-lg="5" *ngIf="isWardAvail">
         <ion-item class="dropdown">
@@ -49,6 +49,7 @@
   </ion-grid>
 
   <h5 class="ion-padding" *ngIf="noDatafound">No Record Found</h5>
+  <h5 class="ion-padding" *ngIf="noWardfound">No Ward Found</h5>
 
   <ion-card *ngIf="wardDetails">
     <ion-card-header>

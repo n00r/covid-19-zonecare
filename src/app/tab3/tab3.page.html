@@ -22,7 +22,7 @@
 
 
         </ion-searchbar>
-        <p style="color: red;" *ngIf="!isvalid">Invalid Pincode</p>
+        <p style="color: red;" *ngIf="!isvalid">Not a valid pincode</p>
 
 
       </ion-col>
@@ -73,6 +73,7 @@
     </ion-segment-button>
   </ion-segment>
   <h5 class="ion-padding" *ngIf="noDatafound">No Record Found</h5>
+  <h5 class="ion-padding" *ngIf="noWardfound">No Ward Found</h5>
 
   <div class="p22"></div>
   </ion-grid>

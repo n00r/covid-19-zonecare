@@ -15,6 +15,7 @@ export class Tab2Page {
   selectWardVal: any;
   wardDetails: any;
   noDatafound: boolean = false;
+  noWardfound: boolean = false;
   pincode: any;
   isvalid: boolean = true;
   wardselected : boolean = false;
@@ -30,11 +31,14 @@ export class Tab2Page {
   }
   onInput(ev){
     this.myInputvalue = ev.detail.value;
+    this.isWardAvail = false;
+    this.wardDetails = false;
+    this.wardselected = false;
 
 
   }
   getwardlist(){
-    if (this.myInputvalue.length <6){
+    if (this.myInputvalue.length <6 || this.myInputvalue.length>6){
       this.isvalid =false;
       return;
       
@@ -49,8 +53,12 @@ export class Tab2Page {
     this.apiService.getWardList(val).subscribe(response => {
       if(response.length !== 0 ){
         this.isWardAvail=true;
+        this.noWardfound= false;
+        this.countdata = response;
       }
-      this.countdata = response;
+      else{
+        this.noWardfound= true;
+      }
     })
   }
   selectWard(e){
@@ -64,7 +72,7 @@ export class Tab2Page {
   }
   onValid(e) {
     if (e.type == "ionInput") {
-    this.selectWardVal= e.target.value.substring(0, 6);
+    this.pincode= e.target.value.substring(0, 6);
     }
   }
 
